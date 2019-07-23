@@ -19,12 +19,18 @@
         <div class="zzry-detail">
           <div class="zzry-p">
             <p class="zzry-first-p">
-              {{ `${field.field.rowData.zzry.name} (${field.field.rowData.zzry.num}) ${field.field.rowData.zzry.sex}` }}
+              {{ `${field.field.rowData.zzry.name || 
+              ''} (${field.field.rowData.zzry.num || 
+              ''}) ${field.field.rowData.zzry.sex || 
+              ''}` }}
             </p>
             <p>
               {{
-                `${field.field.rowData.zzry.bus}_${field.field.rowData.zzry.emp}_${field.field.rowData.zzry.pos}_${
-                  field.field.rowData.zzry.auth
+                `${field.field.rowData.zzry.bus || 
+              ''}_${field.field.rowData.zzry.emp || 
+              ''}_${field.field.rowData.zzry.pos}_${
+                  field.field.rowData.zzry.auth || 
+              ''
                 }`
               }}
             </p>
@@ -54,7 +60,7 @@
       :headers="data1"
       :data.sync="data2"
       @change="change"
-      :isAdd="true"
+      :isAdd="false"
       :fixCols="editTableJson.fixCols"
       :tableHeaderHeight="editTableJson.tableHeaderHeight"
       :tableTdHeight="editTableJson.tableTdHeight"
@@ -172,6 +178,7 @@ export default {
   position: relative;
   .zzry-p {
     width: 100%;
+    padding: 10px;
     p {
       font-size: 14px;
       color: #303133;
