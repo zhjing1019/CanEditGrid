@@ -8,22 +8,22 @@ export default {
   editTable: {
     editTableType: "del",
     rules: {
-      zzsj: [{ type: "date", required: true, message: "请选择转正时间", trigger: "change" }],
-      zzlb: [{ required: true, message: "请选择转正类别", trigger: "change" }],
+      zzsj: [{ type: "date", required: true, message: "请选择时间", trigger: "change" }],
+      zzlb: [{ required: true, message: "请选择类别", trigger: "change" }],
     }
   },
   //表头数据
   headers: [
     {
       name: "zzry",
-      title: "转正人员",
+      title: "测试1",
       width: 350,
       slot: true
     },
     {
       name: "zzsj",
       width: 200,
-      title: "转正时间",
+      title: "测试时间",
       editType: "date"
     },
     {
@@ -35,7 +35,7 @@ export default {
     {
       name: "zzlb",
       width: 200,
-      title: "转正类别",
+      title: "测试类别",
       editType: "select",
       label: "code",
       value: "id",
@@ -61,12 +61,12 @@ export default {
     {
       name: "khqk",
       width: 200,
-      title: "考核情况",
+      title: "测试（只展示数据）",
       editType: "none"
     },
     {
       name: "zzsm",
-      title: "转正说明",
+      title: "测试三",
       width: 200,
       editType: "input"
     }
@@ -74,34 +74,34 @@ export default {
   data: [
     {
       zzry: {
-        name: "王丽宣",
+        name: "测试",
         sex: "男",
-        bus: "北京分行",
-        pos: "结算管理部",
-        emp: "财务部",
-        auth: "岗位/职位",
-        num: "1001802"
+        bus: "测试部门",
+        pos: "测试",
+        emp: "测试",
+        auth: "测试",
+        num: "测试"
       },
       zzsj: "",
       zzlb: "",
-      khqk: "考核情况良好",
-      zzsm: "这里是转正说明字段",
+      khqk: "测试",
+      zzsm: "测试",
       sfz: ""
     },
     {
       zzry: {
-        name: "王丽宣",
-        sex: "男",
-        bus: "北京分行",
-        pos: "结算管理部",
-        emp: "财务部",
-        auth: "岗位/职位",
-        num: "1001802"
+        name: "测试",
+        sex: "测试",
+        bus: "测试",
+        pos: "测试",
+        emp: "测试",
+        auth: "测试",
+        num: "测试"
       },
       zzsj: "",
       zzlb: "",
-      khqk: "考核情况良好",
-      zzsm: "这里是转正说明字段",
+      khqk: "测试",
+      zzsm: "测试",
       sfz: ""
     }
   ]

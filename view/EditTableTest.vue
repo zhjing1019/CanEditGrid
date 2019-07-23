@@ -1,6 +1,6 @@
 <template>
   <div class="edit-table-test">
-    <h3>人员合同试用期转正表格</h3>
+    <h3>可编辑表格</h3>
     <edit-table
       ref="empTable1"
       :headers="empEditData.headers"
@@ -13,7 +13,7 @@
       :editTable="empEditData.editTable"
       @data-change="dataChange"
       @editDragEnd="editDragEnd"
-      style="height: 400px;"
+      style="height: 400px; width: 100%"
     >
       <template slot="zzry" slot-scope="field" class="fl-td">
         <div class="zzry-detail">
@@ -32,7 +32,6 @@
         </div>
       </template>
       <template slot="sfz" slot-scope="field" class="fl-td">
-        <!-- {{ field }} -->
         <el-input
           v-model="field.field.rowData.sfz"
           @change="
@@ -50,7 +49,6 @@
     </el-row>
     <br />
     <h3>可编辑表格</h3>
-    <h5>可编辑表格, 可以删除当前行</h5>
     <edit-table
       ref="editTable1"
       :headers="data1"
@@ -172,17 +170,8 @@ export default {
 .zzry-detail {
   height: 60px !important;
   position: relative;
-  img {
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: 12px;
-    left: 3px;
-  }
   .zzry-p {
     width: 100%;
-    padding-left: 48px;
-    padding-top: 10px;
     p {
       font-size: 14px;
       color: #303133;

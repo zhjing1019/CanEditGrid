@@ -401,7 +401,10 @@ export default {
     getParentTag(startTag) {
       var self = this;
       // 传入标签是否是DOM对象
-      if (!(startTag instanceof HTMLElement)) return console.error("receive only HTMLElement");
+      if (!(startTag instanceof HTMLElement)) {
+        console.error("receive only HTMLElement");
+        return 
+      }
       // 父级标签是否是body,是着停止返回集合,反之继续
       if ("BODY" !== startTag.parentElement.nodeName) {
         if (startTag.parentElement.nodeName == "TD") {
@@ -540,30 +543,6 @@ export default {
       if (newData.length > 0) {
         let data = this.comfirVal(newData);
         return data;
-        //todo: 这里暂时不要删除，后续功能可能会添加
-        // let data = newData.map(x => {
-        //   return x + 1;
-        // });
-        // data = data.join(",");
-        // this.$confirm(`第${data}行未做任何操作, 是否继续?`, "提示", {
-        //   confirmButtonText: "确定",
-        //   cancelButtonText: "取消",
-        //   type: "warning"
-        // })
-        //   .then(() => {
-        //     let data = this.comfirVal(newData);
-        //     isVal = data;
-        //     return data;
-        //   })
-        //   .catch(() => {
-        //     this.$message({
-        //       type: "info",
-        //       message: "已取消提交"
-        //     });
-        //     isVal = false;
-        //     // this.$emit('submitEdit', isVal, )
-        //     return false;
-        //   });
       } else {
         let data = this.comfirVal([]);
         return data;
@@ -630,6 +609,37 @@ export default {
 };
 </script>
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.scroll-div::-webkit-scrollbar {
+  width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+}
+.scroll-div::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  // -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(144, 147, 153, 0.5);
+}
+.scroll-div::-webkit-scrollbar-track {
+  // -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: transparent;
+}
 .editTableWrapper {
   position: relative;
   -webkit-user-select: none;
@@ -804,14 +814,6 @@ export default {
   }
 }
 
-// .editTableWrapper {
-//   .el-input--small {
-//     .el-input__inner {
-//       height: 100%;
-//       line-height: 100%;
-//     }
-//   }
-// }
 .icon-ser {
   cursor: pointer;
 }
