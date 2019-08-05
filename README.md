@@ -19,7 +19,8 @@
 支持表格的实时校验
 ##   组件的使用
 ###1、组件
-```<edit-table
+```
+<edit-table
       ref="empTable1"
       :headers="empEditData.headers"
       :data.sync="empEditData.data"
@@ -33,9 +34,11 @@
       @editDragEnd="editDragEnd"
       style="height: 400px; width: 100%"
     >
-</edit-table>```
+</edit-table>
+```
 ###2、表头的数据
-```[
+```
+[
     {
       name: "zzry",
       title: "测试1",
@@ -92,9 +95,11 @@
       width: 200,
       editType: "input"
     }
-  ]``` 
+  ]
+``` 
 ###4、data数据 
-```data: [
+```
+data: [
     {
       zzry: {
         name: "测试",
@@ -127,7 +132,8 @@
       zzsm: "测试",
       sfz: ""
     }
-  ]``` 
+  ]
+``` 
 ###5、校验规则 
 ```
 editTable: {
@@ -158,7 +164,7 @@ editTable: {
       select: [{ type: "string", required: true, message: "请选择code", trigger: "change" }]
     }
   }
-  ```
+```
 ###6、表头配置 
 1、width, 表示此列的宽度 
 2、name，表示此列的id
@@ -166,7 +172,8 @@ editTable: {
 4、slot, 表示此列是否自定义 
 5、editType, 表示此列的编辑类型（ 
     1、editType = "treeSelect" 选择机构树 
-    ```{
+```
+    {
       name: "treeSelect",
       title: "选择树机构",
       width: 200,
@@ -202,10 +209,12 @@ editTable: {
         placeholder: "请输入内容"
       },
       list: []
-    },``` 
+    },
+``` 
     2、editType: "input", input输入框 
     3、editType: "select", select选择框 
-    ```{
+    ```
+{
       name: "select",
       title: "select选择框",
       width: 100,
@@ -231,7 +240,8 @@ editTable: {
           id: "4"
         }
       ]
-    },``` 
+    },
+``` 
     4、editType: "date",年月日时间选择框 
     5、editType: "dateRange",年月日时间范围 
     6、editType: "none",显示文本值 
