@@ -18,7 +18,7 @@
 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit4.png)
 支持表格的实时校验
 ##   组件的使用
-###1、组件
+### 1、组件
 ```
 <edit-table
       ref="empTable1"
@@ -36,7 +36,7 @@
     >
 </edit-table>
 ```
-###2、表头的数据
+### 2、表头的数据
 ```
 [
     {
@@ -97,7 +97,7 @@
     }
   ]
 ``` 
-###4、data数据 
+### 4、data数据 
 ```
 data: [
     {
@@ -134,7 +134,7 @@ data: [
     }
   ]
 ``` 
-###5、校验规则 
+### 5、校验规则 
 ```
 editTable: {
     rules: {
@@ -165,12 +165,12 @@ editTable: {
     }
   }
 ```
-###6、表头配置 
+### 6、表头配置 
 1、width, 表示此列的宽度 
 2、name，表示此列的id
 3、title, 表示此列的字段名 
 4、slot, 表示此列是否自定义 
-5、editType, 表示此列的编辑类型（ 
+5、editType, 表示此列的编辑类型（  
     1、editType = "treeSelect" 选择机构树 
 ```
     {
@@ -213,7 +213,7 @@ editTable: {
 ``` 
     2、editType: "input", input输入框 
     3、editType: "select", select选择框 
-    ```
+```
 {
       name: "select",
       title: "select选择框",
