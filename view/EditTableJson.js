@@ -50,18 +50,6 @@ export default {
       slot: true
     },
     {
-      name: "selectPerson1",
-      width: 200,
-      editType: "selectPerson",
-      disabled: false,
-      multiple: false,
-      title: "测试选择人组件",
-      placeholder: "请选择人",
-      clearable: true,
-      treeType: "orgTree",
-      val: ""
-    },
-    {
       name: "treeSelect",
       title: "选择树机构",
       width: 200,
