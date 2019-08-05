@@ -291,12 +291,12 @@ editTable: {
     field.field.colIndex 从底层传出的colIndex，当前行的数据的列数
     field.field.rowIndex 从底层传出的rowIndex，当前行的数据的行数
 ### 8、表格触发的事件 
-change：数据发生改变时触发
+change：数据发生改变时触发 
 data-change：可编辑表格中td发生变化时触发的事件（slot的td除外）
 editDragEnd：拖拽赋值结束后触发的事件（currentColIndex, selectArr, name, value，返回四个数据，）
-this.$refs[ref].submitForm()：提交表单
-this.$refs[ref].clearAll()：清空表格
-this.$refs[ref].resetAll()：重置表格
+this.$refs[ref].submitForm()：提交表单 
+this.$refs[ref].clearAll()：清空表格 
+this.$refs[ref].resetAll()：重置表格 
 
 
 
