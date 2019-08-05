@@ -1,0 +1,26 @@
+{
+  "name": "can-edit-table",
+  "version": "1.0.0",
+  "description": "1、下载依赖包 `npm install` 2、启动项目 `vue serve`   ##   项目概览 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/editGif.gif)   基于vue和element的可拖拽赋值的可编辑表格，支持表格实时校验，联动校验。 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEditGrid%402x.png)   支持input、datepicker、select、selctTree等等。可以自定义td的内容，支持slot插槽。",
+  "main": "main.js",
+  "dependencies": {
+    "element-ui": "^2.10.1",
+    "el-tree-select": "^3.1.3",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhjing1019/CanEditGrid.git"
+  },
+  "author": "zhjing1019 <954740056@qq.com> (http://example.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhjing1019/CanEditGrid/issues"
+  },
+  "homepage": "https://github.com/zhjing1019/CanEditGrid#readme"
+}

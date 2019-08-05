@@ -7,8 +7,6 @@ export default {
   tableTdHeight: 40,
   ref: "tableEdit1",
   editTable: {
-    editTableType: "del",
-    iconName: "icon-delete",
     rules: {
       input: [
         { required: true, message: "请输入活动名称ceshi", trigger: "change" },
