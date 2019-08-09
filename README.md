@@ -18,6 +18,16 @@
 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit4.png)
 支持表格的实时校验
 ##   组件的使用
+`npm install can-edit-table` 
+引用组件 
+`import editTable from "can-edit-table"`
+注册组件
+`components: {editTable},`
+组件demo 
+https://github.com/zhjing1019/canEditDemo.git 
+组件源码 
+https://github.com/zhjing1019/CanEditGrid 
+
 ### 1、组件
 ```
 <edit-table
