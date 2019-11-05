@@ -1,35 +1,35 @@
 ##   启动
 1、使用此组件
 `npm install can-edit-table` 
-2、启动项目
+2、启动项目 
 `npm install` 
 `vue serve`  
-##   项目概览
+##   项目概览 
 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/editGif.gif)  
-基于vue和element的可拖拽赋值的可编辑表格，支持表格实时校验，联动校验。
+基于vue和element的可拖拽赋值的可编辑表格，支持表格实时校验，联动校验。 
 ![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEditGrid%402x.png)  
-支持input、datepicker、select、selctTree等等。可以自定义td的内容，支持slot插槽。
+支持input、datepicker、select、selctTree等等。可以自定义td的内容，支持slot插槽。 
 
-![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit2.png)
+![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit2.png) 
 
-![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canedit3.png)
-支持拖拽赋值，类似于excel的拖拽赋值功能
+![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canedit3.png) 
+支持拖拽赋值，类似于excel的拖拽赋值功能 
 
-![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit4.png)
-支持表格的实时校验
-##   组件的使用
-##### 组件下载
+![图片名称](https://github.com/zhjing1019/CanEditGrid/blob/master/img/canEdit4.png) 
+支持表格的实时校验 
+##   组件的使用 
+##### 组件下载 
 `npm install can-edit-table` 
 ##### 引用组件 
-`import editTable from "can-edit-table"`
-##### 注册组件
-`components: {editTable},`
+`import editTable from "can-edit-table"` 
+##### 注册组件 
+`components: {editTable},` 
 ##### 组件demo 
 https://github.com/zhjing1019/canEditDemo.git 
 ##### 组件源码 
 https://github.com/zhjing1019/CanEditGrid 
 
-### 1、组件
+### 1、组件 
 ```
 <edit-table
       ref="empTable1"
@@ -46,8 +46,8 @@ https://github.com/zhjing1019/CanEditGrid
       style="height: 400px; width: 100%"
     >
 </edit-table>
-```
-### 2、表头的数据
+``` 
+### 2、表头的数据 
 ```
 [
     {
@@ -175,10 +175,10 @@ editTable: {
       select: [{ type: "string", required: true, message: "请选择code", trigger: "change" }]
     }
   }
-```
+``` 
 ### 6、表头配置 
 1、width, 表示此列的宽度 
-2、name，表示此列的id
+2、name，表示此列的id 
 3、title, 表示此列的字段名 
 4、slot, 表示此列是否自定义 
 5、editType, 表示此列的编辑类型（  
@@ -298,16 +298,20 @@ editTable: {
 1、slot与表头的name字段对应 
 2、slot-scope="field" 
     field.field.rowData 从底层传出的rowData，当前行的数据 
-    field.field.field 从底层传出的field，当前行的数据的表头字段
-    field.field.colIndex 从底层传出的colIndex，当前行的数据的列数
-    field.field.rowIndex 从底层传出的rowIndex，当前行的数据的行数
+    field.field.field 从底层传出的field，当前行的数据的表头字段 
+    field.field.colIndex 从底层传出的colIndex，当前行的数据的列数 
+    field.field.rowIndex 从底层传出的rowIndex，当前行的数据的行数 
 ### 8、表格触发的事件 
 change：数据发生改变时触发 
 data-change：可编辑表格中td发生变化时触发的事件（slot的td除外）
 editDragEnd：拖拽赋值结束后触发的事件（currentColIndex, selectArr, name, value，返回四个数据，）
+
 this.$refs[ref].submitForm()：提交表单 
+
 this.$refs[ref].clearAll()：清空表格 
+
 this.$refs[ref].resetAll()：重置表格 
+
 
 
 
