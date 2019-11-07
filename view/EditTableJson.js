@@ -97,7 +97,7 @@ export default {
       name: "select",
       title: "select选择框",
       width: 100,
-      multiple: true,
+      multiple: false,
       editType: "select",
       label: "code",
       value: "id",

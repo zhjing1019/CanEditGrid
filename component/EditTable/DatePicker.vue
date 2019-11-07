@@ -30,6 +30,7 @@ export default {
       default: null
     }
   },
+  inject: ["edit"],
   data() {
     return {
       timeData: this.valueDefault,
@@ -40,10 +41,10 @@ export default {
   },
   watch: {
     timeData(val) {
-      this.$parent.$parent.data[this.editRow][this.$parent.$parent.headers[this.editCol].name] = val;
+      this.edit.data[this.editRow][this.edit.headers[this.editCol].name] = val;
       let data = val;
-      data = this.$parent.$parent.dateTimeChang(data);
-      this.$parent.$parent.tableValidate(this.propRuls, data, this.editCol, this.editRow, 0);
+      data = this.edit.dateTimeChang(data);
+      this.edit.tableValidate(this.propRuls, data, this.editCol, this.editRow, 0);
       this.$emit("data-change", val, this.editRow, this.editCol, this.rowData, this.field, this.propRuls);
     },
     valueDefault: {

@@ -33,18 +33,19 @@ export default {
       timeData: this.valueDefault
     };
   },
+  inject: ["edit"],
   watch: {
     timeData(val) {
-      this.$parent.$parent.data[this.editRow][this.$parent.$parent.headers[this.editCol].name] = val;
+      this.edit.data[this.editRow][this.edit.headers[this.editCol].name] = val;
       let data = val || "";
       if (data && data.length > 1) {
         data.forEach(x => {
-          let time = this.$parent.$parent.dateTimeChang(x);
-          this.$parent.$parent.tableValidate(this.propRuls, time, this.editCol, this.editRow, 0);
+          let time = this.edit.dateTimeChang(x);
+          this.edit.tableValidate(this.propRuls, time, this.editCol, this.editRow, 0);
         });
       } else {
-        let empty = this.$parent.$parent.dateTimeChang(data);
-        this.$parent.$parent.tableValidate(this.propRuls, empty, this.editCol, this.editRow, 0);
+        let empty = this.edit.dateTimeChang(data);
+        this.edit.tableValidate(this.propRuls, empty, this.editCol, this.editRow, 0);
       }
       this.$emit("data-change", val, this.editRow, this.editCol, this.rowData, this.field, this.propRuls);
     },

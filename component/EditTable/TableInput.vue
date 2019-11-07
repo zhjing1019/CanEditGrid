@@ -40,10 +40,6 @@ export default {
   },
   watch: {
     timeData(val) {
-      // this.$parent.$parent.data[this.editRow][this.$parent.$parent.headers[this.editCol].name] = val;
-      // let data = val;
-      // this.$parent.$parent.tableValidate(this.propRuls, data, this.editCol, this.editRow, 0);
-      // this.$emit("data-change", val, this.editRow, this.editCol, this.rowData, this.field, this.propRuls);
       this.edit.data[this.editRow][this.edit.headers[this.editCol].name] = val;
       let data = val;
       this.edit.tableValidate(this.propRuls, data, this.editCol, this.editRow, 0);

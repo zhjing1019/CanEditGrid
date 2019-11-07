@@ -133,16 +133,7 @@ export default {
     createSerial(h, rowData, index) {
       let serial = index + 1 < 10 ? "0" + (index + 1) : index + 1;
       let detailSpan = "";
-      // TODO:这里暂时不能删除，后续可能会加上此功能；
-      // let svgIcon = (<svg name={this.edit.editTable.iconName} width={20} height={20}></svg>)
-      // if (this.edit.hoverEnterTr == index && this.edit.hoverEnterTr !== -1 && this.edit.isEditTable) {
-      //   detailSpan = (<span
-      //   class={{"icon-ser": true}}
-      //   style={{width: this.edit.serialWidth + "px"}}
-      //   onClick={ () => {this.iconClick(index);}}>{svgIcon}</span>)
-      // } else {
-        detailSpan = h("span", {}, [serial]);
-      // }
+      detailSpan = h("span", {}, [serial]);
       return detailSpan;
     },
     //创建表格行 (index 为 rowIndex)
@@ -190,8 +181,6 @@ export default {
           style={{
             width: field.width + "px",
             overflow: "hidden",
-            // height: this.edit.tableTdHeight + "px",
-            // height: this.edit.tdHeight[rowIndex] ? this.edit.tdHeight[rowIndex] + "px" : this.edit.tableTdHeight + "px",
             height: this.edit.tdHeight[rowIndex] + "px" ,
             minHeight: this.edit.tableTdHeight + 'px',
             background: this.mouseEnterColor(rowIndex),
