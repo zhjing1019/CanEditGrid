@@ -512,8 +512,7 @@ export default {
         // 目标元素的宽高
         this.edit.drag.width = tdTarget.offsetWidth;
         this.edit.drag.height = tdTarget.offsetHeight;
-        // this.$parent.drag.cirLeft = 0 - 4;
-        // this.$parent.drag.cirTop = 0 - 4;
+
         this.edit.drag.cirLeft = this.edit.drag.width - 4;
         this.edit.drag.cirTop = this.edit.drag.height - 4;
         //目标元素距离左侧和上部的位置
