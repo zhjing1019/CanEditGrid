@@ -1,11 +1,6 @@
 export default {
-  //表格类型
-  //(editTableType: 'del'表示可以删除的表格，'clear'表示可以清空的表格)
-  //typeIcon: 序号处hover之后icon的名字
   editTable: {
     ref: "tableEdit",
-    editTableType: "del",
-    iconName: "icon-delete",
     fixCols: 1,
     tableHeaderHeight: 40,
     tableTdHeight: 32,
