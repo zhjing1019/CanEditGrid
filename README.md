@@ -21,7 +21,7 @@
 ##### 组件下载 
 `npm install can-edit-table` 
 ##### 引用组件 
-`import editTable from "can-edit-table"` 
+`import CanEditTable from "can-edit-table"` 
 ##### 注册组件 
 `components: {editTable},` 
 ##### 组件demo 
@@ -31,7 +31,7 @@ https://github.com/zhjing1019/CanEditGrid
 
 ### 1、组件 
 ```
-<edit-table
+<can-edit-table
       ref="empTable1"
       :headers="empEditData.headers"
       :data.sync="empEditData.data"
@@ -45,7 +45,7 @@ https://github.com/zhjing1019/CanEditGrid
       @editDragEnd="editDragEnd"
       style="height: 400px; width: 100%"
     >
-</edit-table>
+</can-edit-table>
 ``` 
 ### 2、表头的数据 
 ```

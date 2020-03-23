@@ -76,7 +76,7 @@ import DragSpan from "./DragSpan.vue";
 import AsyncValidator from "async-validator";
 
 export default {
-  name: "EditTable",
+  name: "CanEditTable",
   mixins: [scrollable],
   components: { ScrollBar, EditSub, DragSpan, SvgIcon },
   data() {

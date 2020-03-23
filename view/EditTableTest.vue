@@ -1,7 +1,7 @@
 <template>
   <div class="edit-table-test">
     <h3>可编辑表格</h3>
-    <edit-table
+    <can-edit-table
       ref="empTable1"
       :headers="empEditData.headers"
       :data.sync="empEditData.data"
@@ -45,7 +45,7 @@
           "
         ></el-input>
       </template>
-    </edit-table>
+    </can-edit-table>
     <br />
     <el-row>
       <el-button type="primary" @click="getValue(empEditData.data)">获取表格数据</el-button>
@@ -55,7 +55,7 @@
     </el-row>
     <br />
     <h3>可编辑表格</h3>
-    <edit-table
+    <can-edit-table
       ref="editTable1"
       :headers="data1"
       :data.sync="data2"
@@ -79,7 +79,7 @@
           {{ field.field.rowData[field.field.field.name] }}
         </div>
       </template>
-    </edit-table>
+    </can-edit-table>
     <br />
     <el-row>
       <el-button type="primary" @click="getValue(editTableJson.data)">获取表格数据</el-button>
@@ -91,12 +91,12 @@
 </template>
 
 <script>
-import EditTable from "./../component/EditTable/EditTable.vue";
+import CanEditTable from "./../component/EditTable/CanEditTable.vue";
 import editTableJson from "./EditTableJson.js";
 import empEditData from "./empEditData.js";
 export default {
   name: "EditTableTest",
-  components: { EditTable },
+  components: { CanEditTable },
   data() {
     return {
       editTableJson: editTableJson,

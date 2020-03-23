@@ -1,0 +1,8 @@
+import CanEditTable from "./EditTable/CanEditTable.vue";
+
+// 为组件添加 install 方法，用于按需引入
+CanEditTable.install = function(Vue) {
+  Vue.component(CanEditTable.name, CanEditTable);
+};
+
+export default CanEditTable;
