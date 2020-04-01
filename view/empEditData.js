@@ -24,7 +24,8 @@ export default {
       name: "zzsj",
       width: 200,
       title: "测试时间",
-      editType: "date"
+      editType: "date",
+      pickerOptions: true,
     },
     {
       name: "sfz",

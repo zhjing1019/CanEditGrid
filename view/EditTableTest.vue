@@ -7,6 +7,7 @@
       :data.sync="empEditData.data"
       @change="change"
       :isAdd="true"
+      :generalDates="generalDates"
       :fixCols="empEditData.fixCols"
       :tableHeaderHeight="empEditData.tableHeaderHeight"
       :tableTdHeight="empEditData.tableTdHeight"
@@ -102,7 +103,8 @@ export default {
       editTableJson: editTableJson,
       data1: [],
       data2: [],
-      empEditData: empEditData
+      empEditData: empEditData,
+      generalDates: ['2020-04-01', '2020-03-01']
     };
   },
   mounted() {
